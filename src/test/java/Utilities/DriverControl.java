@@ -1,7 +1,7 @@
 package Utilities;
 
 public class DriverControl {
-    public void write(){
+    public static void main(String[] args){
         System.out.println("Selam group4!");
         System.out.println("Umarım süpersinizdir!");
     }
