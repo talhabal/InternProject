@@ -28,7 +28,7 @@ public class DialogContent extends Parent {
     public WebElement editButton;
 
     @FindBy(xpath = "(//ms-edit-button/button)")
-    public WebElement editButton2;
+    public WebElement editButton3;
 
 
     public WebElement getWebElement(String strButton){
