@@ -8,4 +8,7 @@ public class LeftNav extends Parent{
         PageFactory.initElements(GeneralWebDriver.getDriver(),this);
     }
 
+
+
+
 }
