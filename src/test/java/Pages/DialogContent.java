@@ -27,7 +27,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//ms-edit-button/button)[1]")
     public WebElement editButton;
 
-
+    // Deneme commit and push
 
 
     public WebElement getWebElement(String strButton){
