@@ -12,6 +12,17 @@ public class DialogContent extends Parent {
         PageFactory.initElements(GeneralWebDriver.getDriver(),this);
     }
 
+    @FindBy(css = "input[formcontrolname='username']")
+    public WebElement userName;
+
+    @FindBy(css = "input[formcontrolname='password']")
+    public WebElement passWord;
+
+    @FindBy(css = "button[aria-label='LOGIN']")
+    public WebElement loginButton;
+
+    @FindBy(css = "div>span[class='mat-tooltip-trigger logo-text']")
+    public WebElement panelNavTitle;
     @FindBy(xpath = "//ms-add-button[contains(@class,'ng-star-inserted')]//button")
     public WebElement addButton;
 
