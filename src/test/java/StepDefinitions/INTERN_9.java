@@ -22,9 +22,14 @@ public class INTERN_9 {
             dialogContent.clickFunction(element);
         }
     }
-
     @And("Click on the element in Dialog")
-    public void clickOnTheElementInDialog() {
+    public void clickOnTheElementInDialog(DataTable dt) {
+
+        List<String> buttons=dt.asList(String.class);
+    }
+
+    @And("User sending the keys in Dialog Content")
+    public void userSendingTheKeysInDialogContent() {
 
     }
 }
