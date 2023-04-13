@@ -23,6 +23,7 @@ public class DialogContent extends Parent {
 
     @FindBy(css = "div>span[class='mat-tooltip-trigger logo-text']")
     public WebElement panelNavTitle;
+
     @FindBy(xpath = "//ms-add-button[contains(@class,'ng-star-inserted')]//button")
     public WebElement addButton;
 
