@@ -3,6 +3,7 @@ package Utilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.Locale;
 import java.util.logging.Level;
@@ -22,7 +23,9 @@ public class GeneralWebDriver {
 
         // Eğer driver yoksa direkt olarak Chrome ile açılıyor
         if (driver==null){
-            driver  =   new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--remote-allow-origins=*");
+            driver  =   new ChromeDriver(options);
         }
         return driver;
     }
