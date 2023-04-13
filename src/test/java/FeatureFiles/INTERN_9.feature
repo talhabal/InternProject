@@ -11,4 +11,6 @@ Feature:INTERN_9 Functionality
       | parameters  |
       | bankAccount |
 
+    And Click on the element in Dialog
+      | addButton |
 

@@ -21,11 +21,10 @@ public class INTERN_9 {
             WebElement element=leftNav.getWebElement(button);
             dialogContent.clickFunction(element);
         }
+    }
 
-
-
-
-
+    @And("Click on the element in Dialog")
+    public void clickOnTheElementInDialog() {
 
     }
 }
