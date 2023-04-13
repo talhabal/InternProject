@@ -14,3 +14,7 @@ Feature:INTERN_9 Functionality
     And Click on the element in Dialog
       | addButton |
 
+    And User sending the keys in Dialog Content
+      | nameInput | sryBank |
+      | IBANInput | 1234 5678 9876 5432 |
+
