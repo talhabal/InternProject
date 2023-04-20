@@ -14,7 +14,7 @@ Feature: INTERN_8 Functionality
       | addButton |
     And Enter a value for the input on the screen
       | nameInput | Biyoloji  |
-      | codeInput | 569234455523  |
+      | codeInput | 15  |
     And Click on the element on the screen
       | saveButton |
     Then Verify that the operation was successful
@@ -23,7 +23,7 @@ Feature: INTERN_8 Functionality
       | addButton |
     And Enter a value for the input on the screen
       | nameInput | Biyoloji  |
-      | codeInput | 569234455523  |
+      | codeInput | 15  |
     And Click on the element on the screen
       | saveButton |
     Then Verify that the operation was unsuccessful
