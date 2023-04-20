@@ -79,6 +79,16 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-delete-button//button")
     public List<WebElement>   deleteBtnList;
 
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='capacity']//input")
+    public WebElement capacity;
+    @FindBy(xpath = "(//mat-select[@formcontrolname='type']//span)[1]")
+    public WebElement lctType;
+
+    @FindBy(xpath = "(//mat-option/span)[2]")
+    public WebElement laboratory;
+
+    @FindBy(xpath = "(//th[@role='columnheader']/div)[1]")
+    public WebElement orderBtn;
     public WebElement getWebElement(String strButton) {
 
         switch (strButton) {
@@ -95,6 +105,10 @@ public class DialogContent extends Parent {
             case "already"       : return errorMessageContent;
             case "codeInput"       : return codeInput;
             case "refresh"       : return refresh;
+            case "capacity"       : return capacity;
+            case "inputLctTypeValue"       : return lctType;
+            case "laboratory"       : return laboratory;
+            case "orderBtn" : return orderBtn;
         }
 
         return null;
