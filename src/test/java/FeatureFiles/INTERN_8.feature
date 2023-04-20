@@ -13,8 +13,8 @@ Feature: INTERN_8 Functionality
     And Click on the element on the screen
       | addButton |
     And Enter a value for the input on the screen
-      | nameInput | Math  |
-      | codeInput | 569423  |
+      | nameInput | Biyoloji  |
+      | codeInput | 569234455523  |
     And Click on the element on the screen
       | saveButton |
     Then Verify that the operation was successful
@@ -22,8 +22,8 @@ Feature: INTERN_8 Functionality
     And Click on the element on the screen
       | addButton |
     And Enter a value for the input on the screen
-      | nameInput | Math  |
-      | codeInput | 569423  |
+      | nameInput | Biyoloji  |
+      | codeInput | 569234455523  |
     And Click on the element on the screen
       | saveButton |
     Then Verify that the operation was unsuccessful
@@ -32,7 +32,7 @@ Feature: INTERN_8 Functionality
     And Find at pages and click
       |  Math  |
     And Enter a value for the input on the screen
-      | nameInput | mathematical  |
+      | nameInput | fizik  |
     And Click on the element on the screen
       | saveButton |
     Then Verify that the operation was successful
