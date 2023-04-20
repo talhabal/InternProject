@@ -1,4 +1,4 @@
-package Runners.StepDefinitions;
+package StepDefinitions;
 
 import Pages.DialogContent;
 import Utilities.GeneralWebDriver;

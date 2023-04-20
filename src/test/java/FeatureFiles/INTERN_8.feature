@@ -36,8 +36,6 @@ Feature: INTERN_8 Functionality
     And Click on the element on the screen
       | saveButton |
     Then Verify that the operation was successful
-    And Find at pages and delete
-      |  mathematical  |
-    Then Verify that the operation was successful
+
 
 

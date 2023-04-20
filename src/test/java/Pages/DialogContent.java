@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 public class DialogContent extends Parent {
     public DialogContent() {
         PageFactory.initElements(GeneralWebDriver.getDriver(), this);
@@ -59,6 +61,11 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "//div[contains(text(),'There is no data to display')]")
     public WebElement tableIsNotSet;
+    @FindBy(xpath = "//tbody[@role='rowgroup']//td")
+    public List<WebElement> tdTextValue;
+
+    @FindBy(xpath = "//button[@aria-label='Next Page']")
+    public WebElement nextPage;
 
     public WebElement getWebElement(String strButton) {
 
@@ -86,6 +93,30 @@ public class DialogContent extends Parent {
 //        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));
 //        clickFunction(deleteImageBtn);
 //        clickFunction(deleteDialogBtn);
+    }
+    public void findPagesAndClick(String text){
+        boolean isFound = false;
+
+        while (!isFound) {
+            for (int i = 0; i < tdTextValue.size(); i++) {
+                System.out.println("Tablodaki değer : " + tdTextValue.get(i).getText());
+                System.out.println("Aranan Değer : " + text);
+
+                if (tdTextValue.get(i).getText().equals(text)) {
+                    clickFunction(tdTextValue.get(i));
+                    isFound = true;
+                    break;
+                }
+            }
+
+            if (!isFound) {
+                clickFunction(nextPage);
+            }
+        }
+
+        if (!isFound) {
+            System.out.println("Belirtilen değer bulunamadı.");
+        }
     }
 
 }
