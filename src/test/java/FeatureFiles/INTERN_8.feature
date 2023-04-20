@@ -13,8 +13,8 @@ Feature: INTERN_8 Functionality
     And Click on the element on the screen
       | addButton |
     And Enter a value for the input on the screen
-      | nameInput | Biyoloji  |
-      | codeInput | 15  |
+      | nameInput | İngilizce  |
+      | codeInput | 152  |
     And Click on the element on the screen
       | saveButton |
     Then Verify that the operation was successful
@@ -22,15 +22,15 @@ Feature: INTERN_8 Functionality
     And Click on the element on the screen
       | addButton |
     And Enter a value for the input on the screen
-      | nameInput | Biyoloji  |
-      | codeInput | 15  |
+      | nameInput | İngilizce  |
+      | codeInput | 152  |
     And Click on the element on the screen
       | saveButton |
     Then Verify that the operation was unsuccessful
 
 
     And Find at pages and click
-      |  Math  |
+      |  İngilizce  |
     And Enter a value for the input on the screen
       | nameInput | fizik  |
     And Click on the element on the screen
