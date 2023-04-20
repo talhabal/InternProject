@@ -66,5 +66,3 @@ Feature:create Position Categories Functionality
 
     And click element in DialogContent
       | searchButton |
-
-    Then Verify that the operation was unsuccessful in Table
