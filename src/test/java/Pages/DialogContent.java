@@ -47,6 +47,9 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
     public WebElement name;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
+    public WebElement codeInput;
+
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     public WebElement successMessage;
 
@@ -81,6 +84,7 @@ public class DialogContent extends Parent {
             case "deleteButton"  : return deleteButton;
             case "deleteAgain"   : return deleteAgain;
             case "already"       : return errorMessageContent;
+            case "codeInput"       : return codeInput;
         }
 
         return null;
