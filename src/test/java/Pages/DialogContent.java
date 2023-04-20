@@ -67,8 +67,17 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//tbody[@role='rowgroup']//td")
     public List<WebElement> tdTextValue;
 
+    @FindBy(xpath = "//tbody[@role='rowgroup']//tr")
+    public List<WebElement> trTextValue;
+
     @FindBy(xpath = "//button[@aria-label='Next Page']")
     public WebElement nextPage;
+
+    @FindBy(xpath = "(//thead[@role='rowgroup']//th/div)[1]")
+    public WebElement   refresh;
+
+    @FindBy(xpath = "//ms-delete-button//button")
+    public List<WebElement>   deleteBtnList;
 
     public WebElement getWebElement(String strButton) {
 
@@ -85,6 +94,7 @@ public class DialogContent extends Parent {
             case "deleteAgain"   : return deleteAgain;
             case "already"       : return errorMessageContent;
             case "codeInput"       : return codeInput;
+            case "refresh"       : return refresh;
         }
 
         return null;
@@ -98,26 +108,45 @@ public class DialogContent extends Parent {
 //        clickFunction(deleteImageBtn);
 //        clickFunction(deleteDialogBtn);
     }
+
+    public void deleteItemTwo() {
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));
+        clickFunction(deleteButton);
+        clickFunction(deleteAgain);
+    }
     public void findPagesAndClick(String text){
         boolean isFound = false;
-
         while (!isFound) {
             for (int i = 0; i < tdTextValue.size(); i++) {
-                if (tdTextValue.get(i).getText().equals(text)) {
+                if (tdTextValue.get(i).getText().contains(text)) {
                     clickFunction(tdTextValue.get(i));
                     isFound = true;
                     break;
                 }
             }
-
             if (!isFound) {
                 clickFunction(nextPage);
             }
         }
-
-        if (!isFound) {
-            System.out.println("Belirtilen değer bulunamadı.");
+    }
+    public void findPagesAndDelete(String text){
+        boolean isFound = false;
+        while (!isFound) {
+            for (int i = 0; i < trTextValue.size(); i++) {
+                if (trTextValue.get(i).getText().contains(text)) {
+                    deleteBtnList.get(i).click();
+                    clickFunction(deleteAgain);
+                    isFound = true;
+                    break;
+                }
+            }
+            if (!isFound) {
+                clickFunction(nextPage);
+            }
         }
     }
+
+
+
 
 }

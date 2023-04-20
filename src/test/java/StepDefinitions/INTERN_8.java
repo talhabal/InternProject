@@ -14,7 +14,7 @@ public class INTERN_8 {
     LeftNav leftNav     =   new LeftNav();
     @Then("Verify that the operation was unsuccessful")
     public void verifyThatTheOperationWasUnsuccessful() {
-      dialogContent.undefinedContainsTextFunction(dialogContent.errorMessageContent, "already");
+      dialogContent.verifyContainsTextFunction(dialogContent.errorMessageContent, "already");
     }
 
 
@@ -38,8 +38,8 @@ public class INTERN_8 {
 
     @And("Find at pages and click")
     public void findAtPagesAndClick(DataTable dt) {
-        List<String> strButtons=dt.asList(String.class);
-        for (String strText: strButtons) {
+        List<String> strLabel   =  dt.asList(String.class);
+        for (String strText : strLabel) {
             dialogContent.findPagesAndClick(strText);
         }
     }
@@ -50,6 +50,14 @@ public class INTERN_8 {
         for (String parentBtn : parent) {
             WebElement  leftButton      =   leftNav.getWebElement(parentBtn);
             leftNav.clickFunction(leftButton);
+        }
+    }
+
+    @And("Find at pages and delete")
+    public void findAtPagesAndDelete(DataTable dt) {
+        List<String> strLabel   =  dt.asList(String.class);
+        for (String strText : strLabel) {
+            dialogContent.findPagesAndDelete(strText);
         }
     }
 }

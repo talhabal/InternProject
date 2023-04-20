@@ -13,8 +13,8 @@ Feature: INTERN_8 Functionality
     And Click on the element on the screen
       | addButton |
     And Enter a value for the input on the screen
-      | nameInput | Math  |
-      | codeInput | 569423  |
+      | nameInput | İngilizce  |
+      | codeInput | 152  |
     And Click on the element on the screen
       | saveButton |
     Then Verify that the operation was successful
@@ -22,20 +22,24 @@ Feature: INTERN_8 Functionality
     And Click on the element on the screen
       | addButton |
     And Enter a value for the input on the screen
-      | nameInput | Math  |
-      | codeInput | 569423  |
+      | nameInput | İngilizce  |
+      | codeInput | 152  |
     And Click on the element on the screen
       | saveButton |
     Then Verify that the operation was unsuccessful
 
-
     And Find at pages and click
-      |  Math  |
+      |  İngilizce  |
     And Enter a value for the input on the screen
-      | nameInput | mathematical  |
+      | nameInput | fizik  |
     And Click on the element on the screen
       | saveButton |
     Then Verify that the operation was successful
-
+    And click element in DialogContent
+      | refresh |
+      | refresh |
+    And Find at pages and delete
+      |  fizik  |
+    Then Verify that the operation was successful
 
 
