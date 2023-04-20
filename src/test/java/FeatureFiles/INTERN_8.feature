@@ -6,7 +6,7 @@ Feature: INTERN_8 Functionality
 
 
   Scenario: Create,Edit and Delete School Departments
-    And Click on the element in LeftNavMenu
+    And Click on the element in LeftNavMenuu
       | setup |
       | schoolSetup |
       | departments |

@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
+import Pages.LeftNav;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -10,6 +11,7 @@ import java.util.List;
 
 public class INTERN_8 {
     DialogContent dialogContent     =   new DialogContent();
+    LeftNav leftNav     =   new LeftNav();
     @Then("Verify that the operation was unsuccessful")
     public void verifyThatTheOperationWasUnsuccessful() {
       dialogContent.undefinedContainsTextFunction(dialogContent.errorMessageContent, "already");
@@ -39,6 +41,15 @@ public class INTERN_8 {
         List<String> strButtons=dt.asList(String.class);
         for (String strText: strButtons) {
             dialogContent.findPagesAndClick(strText);
+        }
+    }
+
+    @And("Click on the element in LeftNavMenuu")
+    public void clickOnTheElementInLeftNavMenuu(DataTable dt) {
+        List<String> parent     =   dt.asList(String.class);
+        for (String parentBtn : parent) {
+            WebElement  leftButton      =   leftNav.getWebElement(parentBtn);
+            leftNav.clickFunction(leftButton);
         }
     }
 }
