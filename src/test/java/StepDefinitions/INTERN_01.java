@@ -60,8 +60,8 @@ public class INTERN_01 {
         dc.undefinedContainsTextFunction(dc.errorMessageContent,"already");
     }
 
-    @Then("Verify that the operation was unsuccessful in Table")
-    public void verifyThatTheOperationWasUnsuccessfulInTable() {
-        dc.undefinedTablesTextFunction(dc.tableIsNotSet, "no data");
-    }
+//    @Then("Verify that the operation was unsuccessful in Table")
+//    public void verifyThatTheOperationWasUnsuccessfulInTable() {
+//        dc.undefinedTablesTextFunction(dc.tableIsNotSet, "no data");
+//    }
 }

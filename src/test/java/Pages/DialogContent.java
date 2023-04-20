@@ -103,9 +103,6 @@ public class DialogContent extends Parent {
 
         while (!isFound) {
             for (int i = 0; i < tdTextValue.size(); i++) {
-                System.out.println("Tablodaki değer : " + tdTextValue.get(i).getText());
-                System.out.println("Aranan Değer : " + text);
-
                 if (tdTextValue.get(i).getText().equals(text)) {
                     clickFunction(tdTextValue.get(i));
                     isFound = true;

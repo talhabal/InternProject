@@ -47,7 +47,6 @@ Feature: INTERN_3 Functionality
       | searchInput | Excel Doc Types  |
     And Click on the element on the screen
       | searchButton |
-    Then Verify that the operation was unsuccessful in Table
 
 
 

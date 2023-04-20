@@ -29,4 +29,16 @@ public class INTERN_12 {
             leftNav.clickFunction(leftButton);
         }
     }
+
+    @And("Editing the user you added in the transaction")
+    public void editingTheUserYouAddedInTheTransaction(DataTable dt) {
+        List<String> parent     =   dt.asList(String.class);
+        for (String parentTxt : parent) {
+            dialogContent.findPagesAndClick(parentTxt);
+        }
+    }
+
+    @And("Deleting the user you added in the transaction")
+    public void deletingTheUserYouAddedInTheTransaction() {
+    }
 }
