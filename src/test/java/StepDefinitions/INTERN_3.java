@@ -10,8 +10,4 @@ public class INTERN_3 {
 //        dialogContent.undefinedTablesTextFunction(dialogContent.tableIsNotSet, "no data");
 //    }
 
-    @Then("Verify that the operation was successful")
-    public void verifyThatTheOperationWasSuccessful() {
-
-    }
 }

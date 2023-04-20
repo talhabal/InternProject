@@ -115,12 +115,12 @@ public class DialogContent extends Parent {
     }
 
 
-    public void deleteItem(String searchText) {
-//        sendKeysFunction(searchInput,searchText);
-//        clickFunction(searchButton);
-//        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));
-//        clickFunction(deleteImageBtn);
-//        clickFunction(deleteDialogBtn);
+    public void deleteItem(WebElement element,String searchText) {
+       sendKeysFunction(mainName,searchText);
+        clickFunction(searchButton);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));
+        clickFunction(deleteButton);
+        clickFunction(deleteAgain);
     }
 
     public void deleteItemTwo() {
