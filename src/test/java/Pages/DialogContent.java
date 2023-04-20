@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class DialogContent extends Parent {
     public DialogContent() {
-        PageFactory.initElements(GeneralWebDriver.getDriver(),this);
+        PageFactory.initElements(GeneralWebDriver.getDriver(), this);
     }
 
     @FindBy(css = "input[formcontrolname='username']")
@@ -36,34 +36,51 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-save-button/button")
     public WebElement saveButton;
 
-    @FindBy(xpath = "(//ms-edit-button/button)[1]")
+    @FindBy(xpath = "//ms-edit-button/button")
     public WebElement editButton;
 
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']/input")
+    public WebElement mainName;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
+    public WebElement name;
 
+    @FindBy(xpath = "//div[contains(text(),'successfully')]")
+    public WebElement successMessage;
 
-    public WebElement getWebElement(String strButton){
+    @FindBy(xpath = "//*[text()=' Delete ']")
+    public WebElement deleteAgain;
 
-        switch (strButton)
-        {
-//            case "addButton" : return addButton;
-//            case "saveButton" : return saveButton;
-//            case "nameInput" : return nameInput;
-//            case "codeInput" : return codeInput;
-//            case "integrationCode" : return integrationCode;
-//            case "priorityCode" : return priorityCode;
-//            case "toggleBar" : return toggleBar;
-//            case "academicPeriod" : return academicPeriod;
-//            case "academicPeriod1" : return academicPeriod1;
-//            case "gradeLevel" : return gradeLevel;
-//            case "gradeLevel2" : return gradeLevel2;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']/input")
+    public WebElement shortName;
+
+    @FindBy(xpath = "//div[contains(text(),'already')]")
+    public WebElement errorMessageContent;
+
+    @FindBy(xpath = "//div[contains(text(),'There is no data to display')]")
+    public WebElement tableIsNotSet;
+
+    public WebElement getWebElement(String strButton) {
+
+        switch (strButton) {
+            case "addButton"     : return addButton;
+            case "nameSearch"    : return mainName;
+            case "successMessage":return successMessage;
+            case "nameInput"     : return name;
+            case "searchButton"  : return searchButton;
+            case "editButton"    : return editButton;
+            case "saveButton"    : return saveButton;
+            case "shortName"     : return shortName;
+            case "deleteButton"  : return deleteButton;
+            case "deleteAgain"   : return deleteAgain;
+            case "already"       : return errorMessageContent;
         }
 
         return null;
     }
 
 
-    public void deleteItem(String searchText){
+    public void deleteItem(String searchText) {
 //        sendKeysFunction(searchInput,searchText);
 //        clickFunction(searchButton);
 //        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));

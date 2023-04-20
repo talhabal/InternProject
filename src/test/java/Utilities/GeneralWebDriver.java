@@ -33,7 +33,7 @@ public class GeneralWebDriver {
     public static void quitDriver(){
         // 4000 milisaniye sonra program kapanmazsa otomatik olarak kapatılır
         try {
-            Thread.sleep(4000);
+            Thread.sleep(5000);
         }
         catch (InterruptedException e){
             throw new RuntimeException(e);
