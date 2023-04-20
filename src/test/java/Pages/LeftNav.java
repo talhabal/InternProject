@@ -21,14 +21,30 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//*[text()='Bank Accounts']")
     public WebElement bankButton;
 
+    @FindBy(xpath="//span[text()='Human Resources']")
+    public WebElement humanResource;
+
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")
+    public WebElement setupHR;
+
+    @FindBy(xpath="(//*[text()='Position Categories'])[1]")
+    public WebElement PositionsCategories;
+
+    @FindBy(xpath=" (//*[text()='Positions'])[1]")
+    public WebElement Positions;
+
 
     public WebElement getWebElement(String strButton){
         switch (strButton)
         {
-            case "setup" : return setup;
-            case "parameters" : return parameters;
-            case "nationalities" : return nationalities;
-            case "bankAccount": return bankButton;
+            case "setup"               : return setup;
+            case "parameters"          : return parameters;
+            case "nationalities"       : return nationalities;
+            case "bankAccount"         : return bankButton;
+            case "HumanResource"       : return humanResource;
+            case "SetUpHR"             : return setupHR;
+            case "PositionsCategories" : return PositionsCategories;
+            case "Position"           : return Positions;
         }
         return null;
     }

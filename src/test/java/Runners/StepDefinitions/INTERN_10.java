@@ -1,4 +1,4 @@
-package StepDefinitions;
+package Runners.StepDefinitions;
 
 public class INTERN_10 {
     public void hello(){

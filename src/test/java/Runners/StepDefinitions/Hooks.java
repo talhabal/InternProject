@@ -1,4 +1,4 @@
-package StepDefinitions;
+package Runners.StepDefinitions;
 
 import Utilities.GeneralWebDriver;
 import io.cucumber.java.After;

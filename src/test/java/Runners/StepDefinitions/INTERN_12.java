@@ -1,4 +1,4 @@
-package StepDefinitions;
+package Runners.StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;

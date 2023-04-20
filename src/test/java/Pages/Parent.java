@@ -56,5 +56,15 @@ public class Parent {
         new Actions(GeneralWebDriver.getDriver()).sendKeys(Keys.ESCAPE).perform(); //açık dialog varsa kapatmak için esc yapıyoruz
     }
 
+    public void undefinedContainsTextFunction(WebElement element,String value){
+        wait.until(ExpectedConditions.textToBePresentInElement(element,value));
+        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
+        new Actions(GeneralWebDriver.getDriver()).sendKeys(Keys.ESCAPE).perform(); //açık dialog varsa kapatmak için esc yapıyoruz
+    }
 
+    public void undefinedTablesTextFunction(WebElement element,String value){
+        wait.until(ExpectedConditions.textToBePresentInElement(element,value));
+        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
+        new Actions(GeneralWebDriver.getDriver()).sendKeys(Keys.ESCAPE).perform(); //açık dialog varsa kapatmak için esc yapıyoruz
+    }
 }
