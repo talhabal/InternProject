@@ -28,7 +28,6 @@ Feature: INTERN_8 Functionality
       | saveButton |
     Then Verify that the operation was unsuccessful
 
-
     And Find at pages and click
       |  İngilizce  |
     And Enter a value for the input on the screen
@@ -36,6 +35,11 @@ Feature: INTERN_8 Functionality
     And Click on the element on the screen
       | saveButton |
     Then Verify that the operation was successful
-
+    And click element in DialogContent
+      | refresh |
+      | refresh |
+    And Find at pages and delete
+      |  fizik  |
+    Then Verify that the operation was successful
 
 
