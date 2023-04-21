@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class INTERN_05 {
+public class INTERN_5 {
     LeftNav ln = new LeftNav();
     DialogContent dc = new DialogContent();
 

@@ -2,21 +2,14 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
-import Utilities.GeneralWebDriver;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 
-import java.nio.file.Watchable;
 import java.util.List;
 
-public class INTERN_01 {
+public class INTERN_1 {
     LeftNav ln = new LeftNav();
     DialogContent dc = new DialogContent();
 
