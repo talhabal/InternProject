@@ -39,7 +39,7 @@ Feature: INTERN_12 Functionality
     Then Verify that the operation was successful
 
     And Find and delete to add data
-      | searchButton | Porgesmodas |
+      | nameSearch | Porgesmodas |
 
 
     Then Verify that the operation was successful
