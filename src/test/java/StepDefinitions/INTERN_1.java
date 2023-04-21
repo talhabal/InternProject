@@ -48,10 +48,7 @@ public class INTERN_1 {
         dc.verifyContainsTextFunction(dc.successMessage, "successfully");
     }
 
-    @Then("Then Verify that the operation was unsuccessful")
-    public void thenVerifyThatTheOperationWasUnsuccessful() {
-        dc.undefinedContainsTextFunction(dc.errorMessageContent,"already");
-    }
+
 
     @And("Find at pages and delete item")
     public void findAtPagesAndDeleteItem(DataTable dt) {
