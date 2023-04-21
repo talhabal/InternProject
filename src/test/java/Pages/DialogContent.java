@@ -149,6 +149,8 @@ public class DialogContent extends Parent {
     public WebElement descriptionSearch;
 
 
+
+
     public WebElement getWebElement(String strButton) {
 
         switch (strButton) {

@@ -68,6 +68,9 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//*[text()='Discounts']")
     public WebElement discounts;
 
+    @FindBy(xpath = "//*[text()='Fields']")
+    public WebElement fields;
+
     public WebElement getWebElement(String strButton){
         switch (strButton)
         {
