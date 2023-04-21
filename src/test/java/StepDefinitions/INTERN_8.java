@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
+import Utilities.GeneralWebDriver;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -59,5 +60,11 @@ public class INTERN_8 {
         for (String strText : strLabel) {
             dialogContent.findPagesAndDelete(strText);
         }
+    }
+
+    @And("The page refresh")
+    public void thePageRefresh() {
+        GeneralWebDriver.getDriver().navigate().refresh();
+
     }
 }

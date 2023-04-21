@@ -62,8 +62,8 @@ public class INTERN_1 {
         }
     }
 
-//    @Then("Verify that the operation was unsuccessful in Table")
-//    public void verifyThatTheOperationWasUnsuccessfulInTable() {
-//        dc.undefinedTablesTextFunction(dc.tableIsNotSet, "no data");
-//    }
+    @Then("Verify that the operation was unsuccessful in Table")
+    public void verifyThatTheOperationWasUnsuccessfulInTable() {
+        dc.undefinedTablesTextFunction(dc.tableIsNotSet, "no data");
+    }
 }

@@ -15,60 +15,39 @@ Feature:create Positions Functionality
 
     And click element in DialogContent in Positions
       | addButton |
-
     And sendKeys element in DialogContentin Positions
       | nameInput |Alim|
       | shortName |sucu|
-
     And click element in DialogContent in Positions
       | saveButton  |
-
     Then verify element in DialogContent in Positions
 
     And click element in DialogContent
       | addButton |
-
     And sendKeys element in DialogContent
       | nameInput |Alim|
       | shortName |sucu|
-
     And click element in DialogContent
       | saveButton  |
-
     Then Then Verify that the operation was unsuccessful
 
 
-    And sendKeys element in DialogContent in Positions
-      | nameSearch   | Alim |
-
-    And click element in DialogContent in Positions
-      | searchButton |
-      | editButton   |
-
-    And sendKeys element in DialogContent in Positions
-      | nameInput   | Mehmet |
-      | shortName | Alim |
+    And Editing the user you added in the transaction
+      | Alim |
+    Then Enter a value for the input on the screen
+      | nameInput | Mehmet |
+    And Click on the element on the screen
+      | saveButton |
+    Then Verify that the operation was successful
 
 
-    And click element in DialogContent in Positions
-      | saveButton   |
-
-    Then verify element in DialogContent in Positions
-
-    And sendKeys element in DialogContent in Positions
-      | nameSearch |mehmet|
-
-    And click element in DialogContent in Positions
-      | searchButton |
-      | deleteButton |
-      | deleteAgain  |
-
-    Then verify element in DialogContent in Positions
+    And Find at pages and delete item
+      |  nameSearch  |  Mehmet  |
+    Then Verify that the operation was successful
 
     And sendKeys element in DialogContent
-      | nameSearch |Mehmet|
-
+      |  nameSearch  |  Mehmet  |
     And click element in DialogContent
-      | searchButton |
-
+      | searchButton   |
     Then Verify that the operation was unsuccessful in Table
+

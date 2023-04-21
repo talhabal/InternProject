@@ -176,7 +176,7 @@ public class DialogContent extends Parent {
         while (!isFound) {
             for (int i = 0; i < trTextValue.size(); i++) {
                 if (trTextValue.get(i).getText().contains(text)) {
-                    deleteBtnList.get(i).click();
+                    clickFunction(deleteBtnList.get(i));
                     clickFunction(deleteAgain);
                     isFound = true;
                     break;

@@ -12,9 +12,9 @@ Feature: INTERN 7 Functionality
     And Click on the screen
       | addButton |
     And Enter a value for the input
-      | nameInput      | Bursa |
+      | nameInput      | Zonguldak |
       | shortName | Nilüfer |
-      | capacity        | 50  |
+      | capacity        | 55620  |
     And Click on the screen
       | inputLctTypeValue |
       | laboratory |
@@ -23,9 +23,9 @@ Feature: INTERN 7 Functionality
     And Click on the screen
       | addButton |
     And Enter a value for the input
-      | nameInput      | Bursa |
+      | nameInput      | Zonguldak |
       | shortName | Nilüfer |
-      | capacity        | 50  |
+      | capacity        | 55620  |
     And Click on the screen
       | inputLctTypeValue |
       | laboratory |
@@ -33,16 +33,17 @@ Feature: INTERN 7 Functionality
     Then Verify that the operation was unsuccessful
     And Click on the screen
       | orderBtn |
-      | orderBtn |
     And Find at pages and click
-      |  Nilüfer  |
+      |  Zonguldak  |
     And Enter a value for the input
-      | nameInput | Osmangazi  |
+      | nameInput | Kastamonu  |
     And Click on the screen
       | saveButton |
       | orderBtn |
       | orderBtn |
     And Find at pages and delete
-      |  Osmangazi  |
+      |  Kastamonu  |
     Then Verify that the operation was successful
+
+
 

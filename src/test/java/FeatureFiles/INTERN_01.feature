@@ -40,3 +40,9 @@ Feature:create Position Categories Functionality
     And Find at pages and delete item
       |  nameSearch  |  mehmet  |
     Then Verify that the operation was successful
+
+    And sendKeys element in DialogContent
+      |  nameSearch  |  mehmet  |
+    And click element in DialogContent
+      | searchButton   |
+    Then Verify that the operation was unsuccessful in Table

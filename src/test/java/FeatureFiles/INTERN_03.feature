@@ -39,6 +39,12 @@ Feature: INTERN_3 Functionality
       | nameSearch | PowerPoint Doc Types  |
     Then Verify that the operation was successful
 
+    And sendKeys element in DialogContent
+      | nameSearch | PowerPoint Doc Types  |
+    And click element in DialogContent
+      | searchButton   |
+    Then Verify that the operation was unsuccessful in Table
+
 
 
 

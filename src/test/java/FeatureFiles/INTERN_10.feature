@@ -43,6 +43,7 @@ Feature: INTERN_10 Functionality
     And Click on the element on the screen
       | updateTableButton |
       | updateTableButton |
+
     And Find at pages and delete
       |  27th  |
     Then Verify that the operation was successful
