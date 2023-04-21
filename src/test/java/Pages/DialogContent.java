@@ -89,6 +89,14 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "(//th[@role='columnheader']/div)[1]")
     public WebElement orderBtn;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='order']//input")
+    public WebElement orderInput;
+
+    @FindBy(xpath = "//ms-button[@tooltip='GENERAL.BUTTON.SEARCH']")
+    public WebElement updateTableButton;
+
+
+
     public WebElement getWebElement(String strButton) {
 
         switch (strButton) {
@@ -109,6 +117,8 @@ public class DialogContent extends Parent {
             case "inputLctTypeValue"       : return lctType;
             case "laboratory"       : return laboratory;
             case "orderBtn" : return orderBtn;
+            case "orderInput" : return orderInput;
+            case "updateTableButton" : return updateTableButton;
         }
 
         return null;
