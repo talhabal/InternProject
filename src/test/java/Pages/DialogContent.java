@@ -108,6 +108,20 @@ public class DialogContent extends Parent {
     public WebElement descInput;
 
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
+    public WebElement nameInputAtt;
+
+    @FindBy(xpath = "//div[contains(text(),'successfully')]")
+    public WebElement messageContent;
+
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']/input")
+    public WebElement searchInput;
+
+    @FindBy(xpath="//button[@type='submit']")
+    public WebElement deleteModalBtn;
+
+
+
 
     public WebElement getWebElement(String strButton) {
 
@@ -116,7 +130,6 @@ public class DialogContent extends Parent {
             case "nameSearch"    : return mainName;
             case "successMessage":return successMessage;
             case "nameInput"     : return name;
-            case "searchButton"  : return searchButton;
             case "editButton"    : return editButton;
             case "saveButton"    : return saveButton;
             case "shortName"     : return shortName;
@@ -135,6 +148,14 @@ public class DialogContent extends Parent {
             case "stageSelect" : return stageSelect;
             case "examSelectOption" : return examSelectOption;
             case "descInput" : return descInput;
+            case "add" : return addButton;
+            case "inputATT" : return nameInputAtt;
+            case "save" : return saveButton;
+            case "srcInput" : return searchInput;
+            case "searchButton" : return searchButton;
+            case "edit" : return editButton;
+            case "delete" : return deleteButton;
+            case "deleteModal"  : return deleteModalBtn;
         }
 
         return null;
