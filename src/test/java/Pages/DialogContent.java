@@ -74,10 +74,10 @@ public class DialogContent extends Parent {
     public WebElement nextPage;
 
     @FindBy(xpath = "(//thead[@role='rowgroup']//th/div)[1]")
-    public WebElement   refresh;
+    public WebElement refresh;
 
     @FindBy(xpath = "//ms-delete-button//button")
-    public List<WebElement>   deleteBtnList;
+    public List<WebElement> deleteBtnList;
 
     @FindBy(xpath = "//ms-integer-field[@formcontrolname='capacity']//input")
     public WebElement capacity;
@@ -117,67 +117,137 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']/input")
     public WebElement searchInput;
 
-    @FindBy(xpath="//button[@type='submit']")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement deleteModalBtn;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='iban']/input")
+    public WebElement ibanInput;
 
+    @FindBy(xpath = "//mat-select[@formcontrolname='currency']//span[text()='Currency']")
+    public WebElement currency;
+
+    @FindBy(xpath = "(//span[@class='mat-option-text'])[2]")
+    public WebElement currency1;
+
+    @FindBy(xpath = "//div[contains(text(),'already')]")
+    public WebElement alreadyMessage;
+
+    @FindBy(xpath = "//tbody[@role='rowgroup']//div")
+    public WebElement dataMessage;
+
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='description']/input")
+    public WebElement description;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
+    public WebElement integrationCode;
+
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']/input")
+    public WebElement priority;
+
+    @FindBy(xpath = "//ms-text-field[@placeholder='DISCOUNT.TITLE.DESCRIPTION']/input")
+    public WebElement descriptionSearch;
 
 
     public WebElement getWebElement(String strButton) {
 
         switch (strButton) {
-            case "addButton"     : return addButton;
-            case "nameSearch"    : return mainName;
-            case "successMessage":return successMessage;
-            case "nameInput"     : return name;
-            case "editButton"    : return editButton;
-            case "saveButton"    : return saveButton;
-            case "shortName"     : return shortName;
-            case "deleteButton"  : return deleteButton;
-            case "deleteAgain"   : return deleteAgain;
-            case "already"       : return errorMessageContent;
-            case "codeInput"       : return codeInput;
-            case "refresh"       : return refresh;
-            case "capacity"       : return capacity;
-            case "inputLctTypeValue"       : return lctType;
-            case "laboratory"       : return laboratory;
-            case "orderBtn" : return orderBtn;
-            case "orderInput" : return orderInput;
-            case "updateTableButton" : return updateTableButton;
-            case "maxButton" : return maxButton;
-            case "stageSelect" : return stageSelect;
-            case "examSelectOption" : return examSelectOption;
-            case "descInput" : return descInput;
-            case "add" : return addButton;
-            case "inputATT" : return nameInputAtt;
-            case "save" : return saveButton;
-            case "srcInput" : return searchInput;
-            case "searchButton" : return searchButton;
-            case "edit" : return editButton;
-            case "delete" : return deleteButton;
-            case "deleteModal"  : return deleteModalBtn;
+            case "addButton":
+                return addButton;
+            case "nameSearch":
+                return mainName;
+            case "successMessage":
+                return successMessage;
+            case "nameInput":
+                return name;
+            case "editButton":
+                return editButton;
+            case "saveButton":
+                return saveButton;
+            case "shortName":
+                return shortName;
+            case "deleteButton":
+                return deleteButton;
+            case "deleteAgain":
+                return deleteAgain;
+            case "already":
+                return errorMessageContent;
+            case "codeInput":
+                return codeInput;
+            case "refresh":
+                return refresh;
+            case "capacity":
+                return capacity;
+            case "inputLctTypeValue":
+                return lctType;
+            case "laboratory":
+                return laboratory;
+            case "orderBtn":
+                return orderBtn;
+            case "orderInput":
+                return orderInput;
+            case "updateTableButton":
+                return updateTableButton;
+            case "maxButton":
+                return maxButton;
+            case "stageSelect":
+                return stageSelect;
+            case "examSelectOption":
+                return examSelectOption;
+            case "descInput":
+                return descInput;
+            case "add":
+                return addButton;
+            case "inputATT":
+                return nameInputAtt;
+            case "save":
+                return saveButton;
+            case "srcInput":
+                return searchInput;
+            case "searchButton":
+                return searchButton;
+            case "edit":
+                return editButton;
+            case "delete":
+                return deleteButton;
+            case "deleteModal":
+                return deleteModalBtn;
+            case "ibanInput":
+                return ibanInput;
+            case "currency":
+                return currency;
+            case "currency1":
+                return currency1;
+            case "description":
+                return description;
+            case "integrationCode":
+                return integrationCode;
+            case "priority":
+                return priority;
+            case "descriptionSearch":
+                return descriptionSearch;
         }
 
         return null;
     }
 
 
-    public void deleteItem(WebElement element,String searchText) {
-        sendKeysFunction(element,searchText);
+    public void deleteItem(WebElement element, String searchText) {
+        sendKeysFunction(element, searchText);
         clickFunction(searchButton);
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
         clickFunction(deleteButton);
         clickFunction(deleteAgain);
     }
 
-    public void editItem(WebElement element,String searchText) {
+    public void editItem(WebElement element, String searchText) {
         clickFunction(editButton);
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));
-        sendKeysFunction(element,searchText);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
+        sendKeysFunction(element, searchText);
         clickFunction(saveButton);
     }
 
-    public void findPagesAndClick(String text){
+    public void findPagesAndClick(String text) {
         boolean isFound = false;
         while (!isFound) {
             for (int i = 0; i < tdTextValue.size(); i++) {
@@ -192,7 +262,8 @@ public class DialogContent extends Parent {
             }
         }
     }
-    public void findPagesAndDelete(String text){
+
+    public void findPagesAndDelete(String text) {
         boolean isFound = false;
         while (!isFound) {
             for (int i = 0; i < trTextValue.size(); i++) {
