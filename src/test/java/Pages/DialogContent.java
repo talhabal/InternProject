@@ -155,7 +155,7 @@ public class DialogContent extends Parent {
             case "searchButton" : return searchButton;
             case "edit" : return editButton;
             case "delete" : return deleteButton;
-            case "deleteModal" : return deleteModalBtn;
+            case "deleteModal"  : return deleteModalBtn;
         }
 
         return null;
