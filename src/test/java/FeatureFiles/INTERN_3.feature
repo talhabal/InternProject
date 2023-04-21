@@ -17,36 +17,28 @@ Feature: INTERN_3 Functionality
     And Click on the element on the screen
       | stageSelect |
       | examSelectOption |
+    And click outside select option
+    And Click on the element on the screen
       | saveButton |
-    
     Then Verify that the operation was successful
-    And Click on the element on the screen
-      | addButton |
-      And Enter a value for the input on the screen
-        | nameInput | Excel Doc Types  |
-    And Click on the element on the screen
-      | stageSelect |
-      | examSelectOption |
-      | stageSelect |
-      | saveButton |
-    Then Verify that the operation was unsuccessful
     And Enter a value for the input on the screen
-      | searchInput | Excel Doc Types  |
+      | nameSearch | Excel Doc Types  |
     And Click on the element on the screen
       | searchButton |
-    And Click on the element in Dialog
-      | editButton  |
-    And Enter a value for the input on the screen
-      | nameInput | PowerPoint Doc Types  |
-    And Click on the element in Dialog
-      | saveButton  |
-    Then Verify that the operation was successful
-    And Click on the element in Dialog
-      | deleteButton  |
-    And Enter a value for the input on the screen
-      | searchInput | Excel Doc Types  |
+
+
+    And Editing the user you added in the transaction
+      | Excel Doc Types |
+    Then Enter a value for the input on the screen
+      | nameInput | PowerPoint Doc Types |
     And Click on the element on the screen
-      | searchButton |
+      | saveButton |
+    Then Verify that the operation was successful
+
+    And Find and delete to add data
+      | nameSearch | PowerPoint Doc Types  |
+    Then Verify that the operation was successful
+
 
 
 

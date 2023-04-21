@@ -95,6 +95,18 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-button[@tooltip='GENERAL.BUTTON.SEARCH']")
     public WebElement updateTableButton;
 
+    @FindBy(xpath = "//div[@class='cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing']")
+    public WebElement maxButton;
+
+    @FindBy(xpath = "//mat-select[@formcontrolname='attachmentStages']")
+    public WebElement stageSelect;
+
+    @FindBy(xpath = "//mat-option//span[text()=' Examination ']")
+    public WebElement examSelectOption;
+
+    @FindBy(xpath = "//mat-form-field[@appearance='outline']//textarea")
+    public WebElement descInput;
+
 
 
     public WebElement getWebElement(String strButton) {
@@ -119,6 +131,10 @@ public class DialogContent extends Parent {
             case "orderBtn" : return orderBtn;
             case "orderInput" : return orderInput;
             case "updateTableButton" : return updateTableButton;
+            case "maxButton" : return maxButton;
+            case "stageSelect" : return stageSelect;
+            case "examSelectOption" : return examSelectOption;
+            case "descInput" : return descInput;
         }
 
         return null;
@@ -131,6 +147,13 @@ public class DialogContent extends Parent {
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));
         clickFunction(deleteButton);
         clickFunction(deleteAgain);
+    }
+
+    public void editItem(WebElement element,String searchText) {
+        clickFunction(editButton);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));
+        sendKeysFunction(element,searchText);
+        clickFunction(saveButton);
     }
 
     public void findPagesAndClick(String text){
@@ -164,8 +187,4 @@ public class DialogContent extends Parent {
             }
         }
     }
-
-
-
-
 }
