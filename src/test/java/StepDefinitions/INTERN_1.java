@@ -53,6 +53,15 @@ public class INTERN_1 {
         dc.undefinedContainsTextFunction(dc.errorMessageContent,"already");
     }
 
+    @And("Find at pages and delete item")
+    public void findAtPagesAndDeleteItem(DataTable dt) {
+        List<List<String>> inputName = dt.asLists(String.class);
+        for (int i = 0; i < inputName.size(); i++) {
+            WebElement inputElement = dc.getWebElement(inputName.get(i).get(0));
+            dc.deleteItem(inputElement, inputName.get(i).get(1));
+        }
+    }
+
 //    @Then("Verify that the operation was unsuccessful in Table")
 //    public void verifyThatTheOperationWasUnsuccessfulInTable() {
 //        dc.undefinedTablesTextFunction(dc.tableIsNotSet, "no data");
