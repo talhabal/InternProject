@@ -1,1 +1,0 @@
-# github üzerinde gözükmesi için oluşturuldu

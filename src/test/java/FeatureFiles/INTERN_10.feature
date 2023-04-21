@@ -20,6 +20,16 @@ Feature: INTERN_10 Functionality
       | saveButton |
     Then Verify that the operation was successful
 
+    And Click on the element on the screen
+      | addButton |
+    And Enter a value for the input on the screen
+      | nameInput | 27th  |
+      | shortName | cls27th  |
+      | orderInput | 9 |
+    And Click on the element on the screen
+      | saveButton |
+    Then Verify that the operation was unsuccessful
+
 
     And Find at pages and click
       |  27th  |
