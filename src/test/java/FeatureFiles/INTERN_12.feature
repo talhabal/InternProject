@@ -9,16 +9,26 @@ Feature: INTERN_12 Functionality
       | setup |
       | parameters |
       | nationalities |
-    #Ekranda bulunan elementlere tıklama işlemi
+
     And Click on the element on the screen
       | addButton |
-    #Ekranda bulunan input'a değer girme
+
     And Enter a value for the input on the screen
       | nameInput | Porgesmoon |
     And Click on the element on the screen
       | saveButton |
-    #Ekranda çıkan uyarıyı doğrulama
+
     Then Verify that the operation was successful
+
+    And Click on the element on the screen
+      | addButton |
+
+    And Enter a value for the input on the screen
+      | nameInput | Porgesmoon |
+    And Click on the element on the screen
+      | saveButton |
+
+    Then Verify that the operation was unsuccessful
 
     And Editing the user you added in the transaction
       | Porgesmoon |
@@ -27,7 +37,9 @@ Feature: INTERN_12 Functionality
     And Click on the element on the screen
       | saveButton |
     Then Verify that the operation was successful
-    #Eklediğimiz kullanıcıyı silme
-    And Deleting the user you added in the transaction
-      | Porgesmodas |
+
+    And Find and delete to add data
+      | nameSearch | Porgesmodas |
+
+
     Then Verify that the operation was successful

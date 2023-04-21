@@ -39,6 +39,19 @@ public class INTERN_12 {
     }
 
     @And("Deleting the user you added in the transaction")
-    public void deletingTheUserYouAddedInTheTransaction() {
+    public void deletingTheUserYouAddedInTheTransaction(DataTable dt) {
+        List<String> strLabel   =  dt.asList(String.class);
+        for (String strText : strLabel) {
+            dialogContent.findPagesAndDelete(strText);
+        }
+    }
+
+    @And("Find and delete to add data")
+    public void findAndDeleteToAddData(DataTable dt) {
+        List< List<String> > items= dt.asLists(String.class);
+        for (int i = 0; i < items.size(); i++) {
+            WebElement element= dialogContent.getWebElement(items.get(i).get(0));
+            dialogContent.deleteItem(element, items.get(i).get(1));
+        }
     }
 }
