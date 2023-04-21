@@ -69,4 +69,7 @@ public class Parent {
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
         new Actions(GeneralWebDriver.getDriver()).sendKeys(Keys.ESCAPE).perform(); //açık dialog varsa kapatmak için esc yapıyoruz
     }
-}
+
+
+    }
+
